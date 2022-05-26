@@ -1,6 +1,6 @@
 Research:
 
-2022-04-27: Speaker Systems + Rasperry Pi Research - 1hr  
+2022-04-27: Speaker Systems + Rasbperry Pi Research - 1hr  
   
 2022-05-04: Speaker Systems Research - 0.5hr  
   
@@ -23,6 +23,11 @@ Research:
 
 2022-05-22: Music Composition - 3hr
 
-2022-05-25: Raspberry Pi Setup - started: 10:30
+2022-05-25: Raspberry Pi Setup, Speaker Pickup, First Visit to Workshop (Woodboom) - 5hr
 - [play audio from terminal ](https://www.makeuseof.com/tag/play-mp3-audio-raspberry-pi/)
 - [play audio from terminal python](https://www.circuitbasics.com/how-to-play-audio-with-the-raspberry-pi/) (the sensor code runs from a python script, so this is probably the most elegant audio playback solution) 
+
+2022-05-26: Raspberry Pi Sensor Coding and Voltage Converter Soldering: 4hr
+- [python SR04 tutorial showcasing gpizero library](https://www.youtube.com/watch?v=JvQKZXCYMUM)
+  - Also shows how to multithread in python
+- [This tutorial includes a different library](https://randomnerdtutorials.com/micropython-hc-sr04-ultrasonic-esp32-esp8266/). End result is a continuous output of distance, which is what I want. 
