@@ -11,4 +11,19 @@ The installation itself was the combination of a phyiscal interactable wooden st
 
 The Raspberry was in charge of registering distance data of the installation door and playing audio. If the door was open, the audio would stop / not be playing. If the door was closed (ie someone had entered the exhibition) the audio would play.
 
+### Raspberry Pi and Sensor Wiring
+
+![raspi and sensor diagram](./img/raspi-sensor-diagram.jpg)     
+
+TRIG = GPIO 23 (output)
+ECHO = GPIO 24 (input) via level shifter
+VCC receives 5v from Raspberry Pi.
+Ground connection to sensor via voltage transformer
+
+Voltage transformer receives: 
+- 3.3v on the LV side 
+- 5v on the HV side
+- GND connects to ground on Raspberry and ground on sensor. 
+- Output from ECHO pin of sensor into HV channel, then from LV partner channel to GPIO 24 on Raspi (as mentioned above)
+
 ## Sound System
