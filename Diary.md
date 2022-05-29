@@ -31,3 +31,17 @@ Research:
 - [python SR04 tutorial showcasing gpizero library](https://www.youtube.com/watch?v=JvQKZXCYMUM)
   - Also shows how to multithread in python
 - [This tutorial includes a different library](https://randomnerdtutorials.com/micropython-hc-sr04-ultrasonic-esp32-esp8266/). End result is a continuous output of distance, which is what I want. 
+
+2022-05-29: Raspberry Pi Sensor Coding and Music Composition 5h
+- Continuouse reading achieved using the [gpiozero library](https://gpiozero.readthedocs.io/en/stable/index.html)
+
+Caught this error during readout:  
+```
+Distance:  69.37784043527472
+/usr/lib/python3/dist-packages/gpiozero/input_devices.py:978: DistanceSensorNoEcho: no echo received
+  warnings.warn(DistanceSensorNoEcho('no echo received'))
+Distance:  69.37784043527472
+``` 
+
+This could most likely caus bugs if I'm running a simple ```if``` statement checking if the value falls below a certain distance. If it encounters a string, it may break? Keep in mind for future error handling
+

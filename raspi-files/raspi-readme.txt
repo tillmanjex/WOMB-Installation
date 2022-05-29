@@ -17,4 +17,4 @@ Voltage transformer receives:
 
 
 Run python script:
-sudo python /home/pi/Documents/WOMB_Installation/SR04-sensor1.00.py
+sudo python /home/pi/WOMB-Installation/raspi-files/python/SR04-sensor1.00.py
