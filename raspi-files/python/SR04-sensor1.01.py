@@ -1,7 +1,9 @@
+#!/usr/bin/python3
 # https://www.youtube.com/watch?v=JvQKZXCYMUM
 
+from signal import signal, SIGTERM, SIGHUP, pause
 from time import sleep
-from gpiozero import DinstanceSensor
+from gpiozero import DistanceSensor
 sensor = DistanceSensor(echo=24, trigger=21)
 
 
@@ -9,7 +11,7 @@ def safe_exit(signum, frame):
 	exit(1)
 
 signal(SIGTERM, safe_exit)
-signal(SIGHUB, safe_exit)
+signal(SIGHUP, safe_exit)
 
 try:
 	while True:
