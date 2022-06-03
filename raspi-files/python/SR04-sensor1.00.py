@@ -23,11 +23,11 @@ GPIO.output(TRIG, False)
 # Take time stamp at last moment echo was 0
 while GPIO.input(ECHO)==0:
     pulse_start = time.time()
-   
+
 # Take time stamp at last moment when echo was 1
 while GPIO.input(ECHO)==1:
     pulse_end = time.time()
-    
+
 # Time echo was 1
 pulse_duration = pulse_end - pulse_start
 
