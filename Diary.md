@@ -48,3 +48,4 @@ This could most likely caus bugs if I'm running a simple ```if``` statement chec
 
 2022-06-03: started 16:30
 - NOTE TO SELF: When working in code, don't forget the physical reality of the hardware you're using. Spent good time trying to debug a "no echo received" error. When digging into the library code, it was commented that if this error happens that "something terrible has gone wrong"... That terrible thing was that the sensor was not facing a perpendicular surface, so the echo was of course bouncing everywhere except back into the unit itself... 
+- Really weird problem where if the audio cable is plugged from the Raspberry to my audio interface, the sensor stops working. Get the same "no echo received error". But when the audio interface end is left unplugged, the code works. The code also works when my headphones are plugged in. So I don't think it's a power delivery issue, maybe a ground problem?
