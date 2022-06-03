@@ -1,15 +1,17 @@
 # WOMB Installation at 48hours Neukölln 
-Documentation for the 2022 installation project "WOMB", which was exhibited at 48h Neukölln in Berlin. 
+Documentation for the 2022 installation project "WOMB", which was exhibited at 48h Neuköln in Berlin. 
 
-The installation itself was the combination of a phyiscal interactable wooden structure, an audio system, a sensor system and a musical composition. 
+The installation itself was the combination of a physical intractable wooden structure, an audio system, a sensor system and a musical composition. 
 
-# Components
+# Components and Setup
 
-## Raspberry Pi 3b and HC-SR04 Ultrasonic Range Sensor
+## Raspberry Pi 3b, HC-SR04 Ultrasonic Range Sensor and Level Shifter
 
 ![raspberry and sensor components](./img/raspi-setup-parts.png)     
 
 The Raspberry was in charge of registering distance data of the installation door and playing audio. If the door was open, the audio would stop / not be playing. If the door was closed (ie someone had entered the exhibition) the audio would play.
+
+As the ECHO output from the sensor outputs a 5v signal, a level shifter was needed to prepare a 3.3v signal for the GPIO pins of the Raspberry Pi.
 
 ### Raspberry Pi and Sensor Wiring
 
