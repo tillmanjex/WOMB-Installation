@@ -31,3 +31,5 @@ Research:
 - [python SR04 tutorial showcasing gpizero library](https://www.youtube.com/watch?v=JvQKZXCYMUM)
   - Also shows how to multithread in python
 - [This tutorial includes a different library](https://randomnerdtutorials.com/micropython-hc-sr04-ultrasonic-esp32-esp8266/). End result is a continuous output of distance, which is what I want. 
+
+2022-06-03: started 16:30
