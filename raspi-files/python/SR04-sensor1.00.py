@@ -6,6 +6,7 @@ TRIG = 23
 ECHO = 24
 
 print "Distance measurement in progress"
+
 GPIO.setup(TRIG, GPIO.OUT)
 GPIO.setup(ECHO, GPIO.IN)
 

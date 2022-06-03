@@ -47,3 +47,4 @@ Distance:  69.37784043527472
 This could most likely caus bugs if I'm running a simple ```if``` statement checking if the value falls below a certain distance. If it encounters a string, it may break? Keep in mind for future error handling
 
 2022-06-03: started 16:30
+- NOTE TO SELF: When working in code, don't forget the physical reality of the hardware you're using. Spent good time trying to debug a "no echo received" error. When digging into the library code, it was commented that if this error happens that "something terrible has gone wrong"... That terrible thing was that the sensor was not facing a perpendicular surface, so the echo was of course bouncing everywhere except back into the unit itself... 
