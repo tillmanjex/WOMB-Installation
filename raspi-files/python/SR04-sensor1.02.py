@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 # https://www.youtube.com/watch?v=JvQKZXCYMUM
 
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
+from gpiozero.pins.native import NativeFactory
 import pygame
 from threading import Thread
 from signal import signal, SIGTERM, SIGHUP, pause
 from time import sleep
 from gpiozero import DistanceSensor
+
+my_factory = NativeFactory()
 
 pygame.mixer.pre_init(frequency=44100, size=-16, channels=2, buffer=512)
 pygame.mixer.init()
@@ -19,19 +22,16 @@ sensor = DistanceSensor(echo=24, trigger=21)
 def safe_exit(signum, frame):
 	exit(1)
 
-
-	
-
 def read_distance():
 	while reading:
-		print("Distance: ", sensor.distance)
+		print("Distance (cm): ", sensor.distance * 100)
 		sleep(0.1)
-		audio_file.play()
-		#if sensor.distance < 0.2:
-		#	print("door closed")
-		#	pygame.mixer.Sound.play(audio_file)
-		#else:
-		#	pygame.mixer.Sound.stop(audio_file)
+		if sensor.distance < 0.2:
+			print("door closed")
+			audio_file.play()
+		else:
+			print("door open")
+			audio_file.stop()
 
 
 signal(SIGTERM, safe_exit)
