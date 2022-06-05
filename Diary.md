@@ -46,8 +46,14 @@ Distance:  69.37784043527472
 
 This could most likely caus bugs if I'm running a simple ```if``` statement checking if the value falls below a certain distance. If it encounters a string, it may break? Keep in mind for future error handling
 
-2022-06-03: 6h
+2022-06-03: Sensor / Raspberry Pi Debugging 6h
 - NOTE TO SELF: When working in code, don't forget the physical reality of the hardware you're using. Spent good time trying to debug a "no echo received" error. When digging into the library code, it was commented that if this error happens that "something terrible has gone wrong"... That terrible thing was that the sensor was not facing a perpendicular surface, so the echo was of course bouncing everywhere except back into the unit itself... 
 - Really weird problem where if the audio cable is plugged from the Raspberry to my audio interface, the sensor stops working. Get the same "no echo received error". But when the audio interface end is left unplugged, the code works. The code also works when my headphones are plugged in. So I don't think it's a power delivery issue, maybe a ground problem?
 - Proving to be really convoluted to get audio output running. Tried pygame and vlc. Had a look at pyAudio too, but looks unnecessarily complicated.
 - After installing python-vlc or PulseAudio packages, the raspberry pi menu bar dissapeared and I'm now also getting a "no session for pid xxx" error. Searched a lot and keep coming back to the fix to ```rm -r ~/.config/lxpanel``` and then ```sudo reboot```. But it's not fixing it for me.
+
+2022-06-04: Sensor / Raspberry Pi Debugging 7h
+- Ridiculously, the audio cable bug mentioned yesterday had to do with the wrong pin numbering value in my python code for the sensor trigger output. What is bizarre is that, despite the pin number being incorrect, the sensor still worked totally as expected and returned distance values to the console... So I had no reason to believe it was a problem with the code... I really thought it must be at the hardware level or a bug with gpiozero library. I only noticed this because I looked at some old code using a different library than gpiozero, and noticed the different values... Everything is working now...
+
+2022-06-05: Speakers test 2h
+- Fabricate speaker cables and tested amp with the speakers at the workshop. Everything working fine. 
