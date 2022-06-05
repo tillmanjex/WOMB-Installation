@@ -53,7 +53,7 @@ This could most likely caus bugs if I'm running a simple ```if``` statement chec
 - After installing python-vlc or PulseAudio packages, the raspberry pi menu bar dissapeared and I'm now also getting a "no session for pid xxx" error. Searched a lot and keep coming back to the fix to ```rm -r ~/.config/lxpanel``` and then ```sudo reboot```. But it's not fixing it for me.
 
 2022-06-04: Sensor / Raspberry Pi Debugging 7h
-- Ridiculously, the audio cable bug mentioned yesterday had to do with the wrong pin numbering value in my python code for the sensor trigger output. What is bizarre is that, despite the pin number being incorrect, the sensor still worked totally as expected and returned distance values to the console... So I had no reason to believe it was a problem with the code... I really thought it must be at the hardware level or a bug with gpiozero library. I only noticed this because I looked at some old code using a different library than gpiozero, and noticed the different values... Everything is working now...
-
+- Ridiculously, the audio cable bug mentioned yesterday had to do with the wrong pin numbering value in my python code for the sensor trigger output. What is bizarre is that, despite the pin number being incorrect, the sensor still worked totally as expected and returned distance values to the console... So I had no reason to believe it was a problem with the code... I really thought it must be at the hardware level or a bug with gpiozero library. I only noticed this because I had my technical notes open next to the code and noticed the different pin numbering... Thank god for self documentation...
+  
 2022-06-05: Speakers test 2h
 - Fabricate speaker cables and tested amp with the speakers at the workshop. Everything working fine. 

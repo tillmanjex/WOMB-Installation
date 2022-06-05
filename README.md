@@ -33,3 +33,9 @@ Voltage transformer receives:
 
 
 ## Sound System
+![Sound System Components](./img/womb_audio_system.png)
+
+The sound system comprised of: 
+- 2 x Heco P3302 speakers (chosen due to their depth being less than 20cm, which was the interior depth of the walls where the speakers were installed. These are however also a great sounding loud speaker)
+- 1 x AIYIMA A05 100w amplifier (compact 100w amp for €80!)
+- Cabling (audio output directly from 3.5mm socket of Raspberry Pi)
