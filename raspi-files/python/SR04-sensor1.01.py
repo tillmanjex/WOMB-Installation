@@ -6,7 +6,7 @@ from signal import signal, SIGTERM, SIGHUP, pause
 from time import sleep
 from gpiozero import DistanceSensor
 
-sensor = DistanceSensor(echo=24, trigger=21)
+sensor = DistanceSensor(echo=24, trigger=23)
 
 def safe_exit(signum, frame):
 	exit(1)
