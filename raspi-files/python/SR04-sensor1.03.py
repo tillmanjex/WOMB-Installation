@@ -17,7 +17,7 @@ reading = True
 sensor = DistanceSensor(echo=24, trigger=23, max_distance=1, threshold_distance=0.2)
 
 def safe_exit(signum, frame):
-	exit(1)
+    exit(1)
 
 def play_audio():
 	audio_file.play()
@@ -26,19 +26,22 @@ def stop_audio():
 	audio_file.stop()
 
 def read_distance():
-	while reading:
-		print("Distance (cm): ", sensor.distance * 100)
-		sleep(0.1)
+    while reading:
+        print("Distance (cm): ", sensor.distance * 100)
+        sleep(0.1)
+        sensor.when_in_range = play_audio
+        sensor.when_out_of_range = stop_audio
 
 
 signal(SIGTERM, safe_exit)
 signal(SIGHUP, safe_exit)
 
 try:
-	reader = Thread(target=read_distance, daemon=True)
-	reader.start()
+    reader = Thread(target=read_distance, daemon=True)
+    reader.start()  
 
-	pause()
+    pause()
+
 
 
 
