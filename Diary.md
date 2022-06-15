@@ -57,3 +57,7 @@ This could most likely caus bugs if I'm running a simple ```if``` statement chec
   
 2022-06-05: Speakers test 2h
 - Fabricate speaker cables and tested amp with the speakers at the workshop. Everything working fine. 
+
+2022-06-05: 2h
+- python script is working, ie, when distance is in range, audio plays and when distance is out of range, audio stops with a fadeout of three seconds. 
+- script added to boot process so no manual start up is needed

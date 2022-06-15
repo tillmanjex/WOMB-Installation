@@ -8,22 +8,22 @@ from signal import signal, SIGTERM, SIGHUP, pause
 from time import sleep
 from gpiozero import DistanceSensor
 
-pygame.mixer.pre_init(frequency=44100, size=-16, channels=2, buffer=512)
-pygame.mixer.init()
-pygame.mixer.fadeout(2000)
-audio_file = pygame.mixer.Sound('raspi-files/audio/1khz.wav')
+pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=512)
+
+audio_file = pygame.mixer.Sound('/home/pi/WOMB-Installation/raspi-files/audio/1khz.wav')
 
 reading = True
-sensor = DistanceSensor(echo=24, trigger=23, max_distance=1, threshold_distance=0.2)
+sensor = DistanceSensor(echo=24, trigger=23, max_distance=1, threshold_distance=0.1)
 
 def safe_exit(signum, frame):
-    exit(1)
+	exit(1)
 
 def play_audio():
 	audio_file.play()
 
 def stop_audio():
-	audio_file.stop()
+	#audio_file.stop()
+	pygame.mixer.fadeout(3000)
 
 def read_distance():
     while reading:
