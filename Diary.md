@@ -62,3 +62,11 @@ This could most likely caus bugs if I'm running a simple ```if``` statement chec
 - python script is working, ie, when distance is in range, audio plays and when distance is out of range, audio stops with a fadeout of three seconds. 
 - script added to boot process so no manual start up is needed
 - adding scripts to auto start: https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/
+
+2022-06-18: 1h
+- Final touches on composition
+
+2022-06-20: started 18:15
+- Speaker troubleshooting
+- System installation
+- System testing
