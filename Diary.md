@@ -66,7 +66,11 @@ This could most likely caus bugs if I'm running a simple ```if``` statement chec
 2022-06-18: 1h
 - Final touches on composition
 
-2022-06-20: started 18:15
+2022-06-20: 4h
 - Speaker troubleshooting
 - System installation
 - System testing
+
+2022-06-25 + 26: Exhibition Day - 16h
+- Day 1: Sensor became unreliable. It was reading approx +5cm than the actual distance. 
+- Day 2: Full day. No technical problems. Pack down.

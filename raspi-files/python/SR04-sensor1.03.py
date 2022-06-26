@@ -10,10 +10,10 @@ from gpiozero import DistanceSensor
 
 pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=512)
 
-audio_file = pygame.mixer.Sound('/home/pi/WOMB-Installation/raspi-files/audio/1khz.wav')
+audio_file = pygame.mixer.Sound('/home/pi/WOMB-Installation/raspi-files/audio/womb-track-2.01-16bit.wav')
 
 reading = True
-sensor = DistanceSensor(echo=24, trigger=23, max_distance=1, threshold_distance=0.1)
+sensor = DistanceSensor(echo=24, trigger=23, max_distance=1, threshold_distance=0.2)
 
 def safe_exit(signum, frame):
 	exit(1)
@@ -41,9 +41,6 @@ try:
     reader.start()  
 
     pause()
-
-
-
 
 except KeyboardInterrupt:
 	pass

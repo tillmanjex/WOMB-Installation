@@ -1,5 +1,5 @@
-Readme for WOMB Installation
-Originally built by Tillman Jex
+Quick Start Guide for WOMB Installation
+Built by Tillman Jex
 tillmanjex@mailbox.org
 www.tillmanjex.info
 
@@ -17,4 +17,4 @@ Voltage transformer receives:
 
 
 Run python script:
-sudo python3 /home/pi/WOMB-Installation/raspi-files/python/SR04-sensor1.*.py
+sudo python3 /home/pi/WOMB-Installation/raspi-files/python/SR04-sensor1.03.py
