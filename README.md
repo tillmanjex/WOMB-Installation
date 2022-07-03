@@ -44,7 +44,7 @@ The script was set to run automatically on boot:
 
 [Here is the file itself](./raspi-files/python/SR04-sensor1.03.py) in this repo. 
 
-```
+```python
 #!/usr/bin/python3
 # https://www.youtube.com/watch?v=JvQKZXCYMUM
 
