@@ -128,8 +128,10 @@ The exhibition ran for two days, eight hours continuous each day. Over these two
 About four hours into the first day, the music started to sporadically restart, play for 10 or so seconds, then restart again. This happened in a loop.   
 I checked the readout of the distances, and even though with the door closed (which equals a distance from sensor to door frame of approx 4cm), the sensor was moving between 8-10cm.   
 As the ```threshold_distance``` in the sensor setup was set to 0.1m, the music was being restarted.    
+To account for this, I changed the ```threshold_distance``` to 0.2m.
 
-I'm still not sure what exactly caused this sudden change in behaviour. It could've been the heat (as the raspberry was at the top of an enclosed thick wooden box with no ventilation holes, and the exhibition was outside in direct sunlight on a 32 degree day 😅) or it could have been from the repetitive shock of the heavy sliding door hitting the panel where the sensor was installed. Perhaps a membrane of the sensor got vibrated out of position? In any case, a threshold of 20cm is still a very safe range to register the sliding door being open / closed.
+I'm still not sure what exactly caused this sudden change in behaviour. It could've been the heat (as the raspberry was at the top of an enclosed thick wooden box with no ventilation holes, and the exhibition was outside in direct sunlight on a 32 degree day 😅) or it could have been from the repetitive shock of the heavy sliding door hitting the panel where the sensor was installed. Perhaps a membrane of the sensor got vibrated out of position?    
+In any case, a threshold of 20cm is still a very safe range to register the sliding door being open / closed.
 
 ## Final Thoughts
 
