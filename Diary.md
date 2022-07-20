@@ -75,6 +75,5 @@ This could most likely caus bugs if I'm running a simple ```if``` statement chec
 - Day 1: Sensor became unreliable. It was reading approx +5cm than the actual distance. 
 - Day 2: Full day. No technical problems. Pack down.
 
-========================
+---
 Total work time: 56hours
-========================
